@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Surat Cinta & Maaf | Untuk Sayangku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-heart">❤️</div>
+        <div class="loader-text">memuat surat cinta...</div>
+    </div>
+
+    <!-- Background music -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="permintaan-maaf.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main App Container -->
+    <div class="app-container" id="appContainer" style="display: none;">
+        <!-- Background decorative -->
+        <div class="floating-hearts-bg" id="floatingHeartsContainer"></div>
+        <div class="floating-bubbles-bg" id="floatingBubblesContainer"></div>
+        <div class="sparkle-overlay"></div>
+
+        <!-- Musik kontrol -->
+        <div class="music-control">
+            <button id="musicToggleBtn" class="music-btn">🎵 Play Musik</button>
+        </div>
+
+        <!-- Cover / Halaman pembuka -->
+        <div id="coverScreen" class="cover-screen">
+            <div class="glass-card cover-card">
+                <h1 class="cover-title" id="typingTitle">Untuk Sayangku Tercinta ❤️</h1>
+                <p class="cover-subtitle">Sebuah surat dari hati yang paling dalam</p>
+                <button id="openLetterBtn" class="premium-btn open-btn">Buka Surat</button>
+            </div>
+        </div>
+
+        <!-- Flipbook digital -->
+        <div id="flipbookScreen" class="flipbook-screen" style="display: none;">
+            <div class="flipbook-container">
+                <!-- Progress bar -->
+                <div class="progress-wrapper">
+                    <div class="progress-bar-bg">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="page-indicator">
+                        <span id="currentPageNum">1</span> / <span id="totalPagesNum">9</span>
+                    </div>
+                </div>
+
+                <!-- Card halaman -->
+                <div class="page-card-wrapper">
+                    <div id="pageCard" class="page-card glass-card">
+                        <h2 id="pageTitle" class="page-title"></h2>
+                        <div id="pageContent" class="page-content"></div>
+                    </div>
+                </div>
+
+                <!-- Navigasi -->
+                <div class="nav-buttons">
+                    <button id="prevBtn" class="nav-btn">◀ Sebelumnya</button>
+                    <button id="nextBtn" class="nav-btn">Selanjutnya ▶</button>
+                </div>
+                <div class="extra-buttons">
+                    <button id="restartBtn" class="extra-btn">⟳ Restart Surat</button>
+                </div>
+                <footer class="small-footer">Dibuat dengan penuh penyesalan dan kasih sayang ❤️</footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
